@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useState } from 'react';
 import "./portfolio.scss";
 import PortfolioList from './PortfolioList';
@@ -59,30 +59,12 @@ function Portfolio() {
           ))}
         </ul>
         <div className="container">
-          <div className="item">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKvdHn8GmPGCO0y3SJqNHACygpm0h9VycMHg&usqp=CAU" alt="" />
-            <h3>Banking App</h3>
-          </div>
-          <div className="item">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKvdHn8GmPGCO0y3SJqNHACygpm0h9VycMHg&usqp=CAU" alt="" />
-            <h3>Banking App</h3>
-          </div>
-          <div className="item">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKvdHn8GmPGCO0y3SJqNHACygpm0h9VycMHg&usqp=CAU" alt="" />
-            <h3>Banking App</h3>
-          </div>
-          <div className="item">
-          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKvdHn8GmPGCO0y3SJqNHACygpm0h9VycMHg&usqp=CAU" alt="" />
-          <h3>Banking App</h3>
-        </div>
-        <div className="item">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKvdHn8GmPGCO0y3SJqNHACygpm0h9VycMHg&usqp=CAU" alt="" />
-            <h3>Banking App</h3>
-          </div>
-          <div className="item">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKvdHn8GmPGCO0y3SJqNHACygpm0h9VycMHg&usqp=CAU" alt="" />
-            <h3>Banking App</h3>
-          </div>
+            {data.map((d) => (
+               <div className="item">
+               <img src = {d.img} alt="" />
+               <h3>{d.title}</h3>
+             </div>
+            ))}
         </div>
     </div>
   )
