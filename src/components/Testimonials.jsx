@@ -42,7 +42,7 @@ function Testimonials() {
         <h1>Testimonials</h1>
         <div className="container">
         {data.map((data) => (
-          <div className="card">
+          <div className= {data.featured ? "card featured" : "card"}>
             <div className="top">
               <img src="assets/right-arrow.png"className="left" alt="" />
               <img className="user" src={data.img} alt=""/>
